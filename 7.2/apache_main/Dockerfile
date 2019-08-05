@@ -66,7 +66,9 @@ RUN gem install compass
 
 # Installation node.js
 RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
-RUN apt-get install -y nodejs
+RUN apt-get install -yq nodejs
+RUN node -v
+RUN npm -v
 
 # Installation of LESS
 RUN npm install -g less && npm install -g less-plugin-clean-css
