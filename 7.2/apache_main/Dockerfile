@@ -66,7 +66,9 @@ RUN gem install compass
 
 # Installation node.js
 RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
-RUN apt-get install -yq nodejs
+RUN apt-get update && apt-get install -yq \
+  nodejs \
+  npm
 RUN node -v
 RUN npm -v
 
