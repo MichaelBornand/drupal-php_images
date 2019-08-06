@@ -111,9 +111,9 @@ RUN ln -s ~/.composer/vendor/bin/phpcbf /usr/local/bin
 RUN phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer
 
 # installation of ssmtp
-RUN DEBIAN_FRONTEND=noninteractive apt-get install --fix-missing -y ssmtp && rm -r /var/lib/apt/lists/*
-ADD core/ssmtp.conf /etc/ssmtp/ssmtp.conf
-ADD core/php-smtp.ini /usr/local/etc/php/conf.d/php-smtp.ini
+#RUN DEBIAN_FRONTEND=noninteractive apt-get install --fix-missing -y ssmtp && rm -r /var/lib/apt/lists/*
+#ADD core/ssmtp.conf /etc/ssmtp/ssmtp.conf
+#ADD core/php-smtp.ini /usr/local/etc/php/conf.d/php-smtp.ini
 
 COPY config/apache2.conf /etc/apache2
 
